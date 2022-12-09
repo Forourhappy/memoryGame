@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { FaQuestion } from 'react-icons/fa';
+
+// 게임 초기화
+// 라이언 목록이 랜덤으로 섞인 한 쌍의 배열 필요
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// 라이언 사진들이 들어가는 곳
+	const [ryon, setRyon] = useState([]);
+
+	const initGame = () => {
+		const ryonList = [...ryon, ...ryon];
+	};
+
+	return (
+		<>
+			<h1>라이언 맞추기 게임</h1>
+			{ryon.length == 0 ? <button>게임 시작</button> : <button>리셋</button>}
+		</>
+	);
 }
 
 export default App;
