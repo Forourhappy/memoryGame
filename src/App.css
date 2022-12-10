@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'LINESeedKR-Bd';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2')
+		format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	font-family: 'LINESeedKR-Bd';
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+body::after {
+	content: '';
+	background-image: url('/public/라이언\ 배경.png');
+	background-size: 60vh;
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	box-shadow: 0 0 500px 0 #253b5a inset;
+}
+
+h1 {
+	font-size: 3rem;
+	color: white;
+	margin-bottom: 4rem;
+}
+
+.gameBlock {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: auto auto auto auto;
+}
+
+.card {
+	position: relative;
+	width: 150px;
+	height: 170px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card img {
+	width: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	pointer-events: none;
+	border-radius: 10px;
+}
+
+button {
+	font-family: 'LINESeedKR-Bd';
+	border: none;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+}
+
+button.gameStart {
+	font-weight: 800;
+	padding: 1.5rem 2rem;
+	font-size: 25px;
+	border-radius: 10px;
+}
+
+button.reset {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+	width: 80px;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	border-radius: 100px;
+}
